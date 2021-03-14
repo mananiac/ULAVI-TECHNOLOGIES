@@ -1,0 +1,39 @@
+.navbar-brand.mb-0.h1{	 
+	width: 100%;
+	text-align: center;
+}
+.navbar{
+	background-color: #3EA38E;
+}
+#otpEmail{
+	background-color: #3EA38E;
+    color: antiquewhite;
+}
+#otpContact{
+	background-color: #3EA38E;
+    color: antiquewhite;
+}
+
+.row{
+	margin: 2% 5%;
+
+}
+body{
+	margin: 0;
+	padding: 0;
+}
+.rounded{
+    margin: 35px;
+}
+.col-6{
+	width:100%;
+	margin: auto;
+	padding: 0% 5%
+
+}
+.btn.btn-success{
+	
+	margin: 35px auto;
+	background-color: #3EA38E;
+	
+}
