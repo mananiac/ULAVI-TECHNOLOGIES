@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+		integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="stylesheet" href="cssFile.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	<title>Registeration</title>
+
+</head>
+
+<body>
+	<nav class="navbar text-light">
+		<span class="navbar-brand mb-0 h1">REGISTRATION </span>
+	</nav>
+
+
+	<!--FORM STARTS HERE-->
+	<form class="row g-2 needs-validation">
+		<!--<form  action="/registration" method="post" novalidate>-->
+
+		<!--do not use the "novalidate" keyword as 
+																				mentioned in bootstrap documentation for validation-->
+		<!--PERSONAL INFORMATION STARTS HERE-->
+
+		<div class="col-6 ">
+			<h4>Personal Information</h4>
+
+			<br />
+
+
+
+			<div class="form-group">
+				<label for="name">First Name*</label>
+				<input type="text" class="form-control" name="FirstName" id="formGroupExampleInput" placeholder="Raju"
+					minlength="1" maxlength="50" pattern="[a-zA-Z]+" title="Enter only alphabets" required>
+				<!-- +for more than 1 field, * for empty fields, blank for only 1 field after [a-zA-Z] for alphabets validation -->
+			</div>
+
+			<div class="form-group">
+				<label for="name">Last Name*</label>
+				<input type="text" class="form-control" name="LastName" id="formGroupExampleInput2"
+					placeholder="Rastogi" minlength="1" maxlength="50" pattern="[a-zA-Z]+" title="Enter only alphabets"
+					required>
+			</div>
+
+
+			<div class="form-group">
+				<label for="exampleInputEmail1">Business Email address*</label>
+				<input type="email" class="form-control" name="email" id="exampleInputEmail1"
+					aria-describedby="emailHelp" placeholder="example@gmail.com" required>
+				<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+					else.</small>
+			</div>
+
+			<div class="form-group">
+				<label for="exampleInputPassword1">Password*</label>
+				<input type="password" name="registrationPassword" class="form-control" id="registrationPassword"
+					pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,12}$"
+					title="At least 1 Uppercase. At least 1 Lowercase. At least 1 Number. At least 1 Special Symbol--> !@#$%^&*_=+- Min 8 chars and Max 12 chars. "
+					onkeyup='passwordCheck();' placeholder="Password" required>
+				<input type="checkbox" onclick="showPassword()">Show Password
+			</div>
+
+			<div class="form-group">
+				<label for="exampleInputPassword2">Confirm Password*</label>
+				<input type="password" name="registrationConfirmPassword" class="form-control"
+					id="registrationConfirmPassword"
+					pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,12}$"
+					title="At least 1 Uppercase. At least 1 Lowercase. At least 1 Number. At least 1 Special Symbol--> !@#$%^&*_=+- Min 8 chars and Max 12 chars. "
+					onkeyup='passwordCheck();' placeholder="Confirm Password" required>
+				<input type="checkbox" onclick="showConfirmPassword()">Show Password
+				<span id='passwordMessage'></span>
+			</div>
+
+			<div class="input-group mb">
+				<div class="input-group-prepend">
+					<label class="input-group-text" for="inputGroupSelect01">Your role in business</label>
+				</div>
+				<select class="custom-select" id="inputGroupSelect01" required>
+					<option selected>Choose...</option>
+					<option value="1">One</option>
+					<option value="2">Two</option>
+					<option value="3">Three</option>
+				</select>
+			</div>
+
+
+
+
+
+
+
+
+		</div>
+		<!--PERSONAL INFORMATION ENDS HERE-->
+		
+		<!--BUSINESS INFORMATION STARTS HERE-->
+		<div class="col-6 "><br /><br /><br />
+			<h4>Business Information</h4>
+			<br />
+			<div class="form-group">
+				<label for="BusinessName">Business Name*</label>
+				<input type="text" name="businesName" class="form-control" id="formGroupExampleInput"
+					placeholder="What is your business called?" minlength="1" maxlength="100" pattern="[a-zA-Z0-9]+"
+					title="Enter only alphabets. Maximum length 100 characters" required>
+			</div>
+
+			<div class="form-group">
+				<label for="Description">Description*</label>
+				<input type="text" name="businessDescription" class="form-control" id="formGroupExampleInput"
+					placeholder="In not more than 500 words" minlength="1" maxlength="500" pattern="[a-zA-Z0-9._-,]+"
+					title="Enter only alphanumeric characters. Maximum length 500 characters" required>
+			</div>
+			<div class="form-group">
+				<label for="contact">Business Mobile Number*</label>
+				<input type="number" class="form-control" name="contactNumber" id="formGroupExampleInput"
+					max="9999999999" placeholder="Business Mobile Number" pattern="{0-9}+"
+					title="Enter only numericals. Maximum length 10 digits" required>
+
+			</div>
+			<div class="form-group">
+				<label for="BusinessAddress">Business Address*</label>
+				<input type="text" name="businessAddress" class="form-control" id="formGroupExampleInput"
+					placeholder="Where is your business located" minlength="1" maxlength="250"
+					pattern="[a-zA-Z0-9._-,]+" title="Enter only alphanumeric characters. Maximum length 250 characters"
+					required>
+			</div>
+
+			<div class="input-group mb-3">
+				<div class="input-group-prepend">
+					<label class="input-group-text" for="inputGroupSelect01">Business Type*</label>
+				</div>
+				<select class="custom-select" id="inputGroupSelect01" required>
+					<option selected>Choose...</option>
+					<option value="1">One</option>
+					<option value="2">Two</option>
+					<option value="3">Three</option>
+				</select>
+			</div>
+
+			<div class="input-group mb-3">
+				<div class="input-group-prepend">
+					<label class="input-group-text" for="inputGroupSelect01">Country*</label>
+					<script type="text/javascript" src="countries.js"></script>
+					<!--Select Country (with states):  --> <select class="custom-select" id="country" name="country"
+						required></select>
+					<label class="input-group-text" for="inputGroupSelect01">State*</label>
+					<!--Select State: --><select class="custom-select" name="state" id="state" required></select>
+					<hr />
+					<!--Select Country:   <select id="country2" name ="country2"></select>-->
+
+
+					<script language="javascript">
+						populateCountries("country", "state"); // first parameter is id of country drop-down and second parameter is id of state drop-down
+						// populateCountries("country2");
+						// populateCountries("country2");
+					</script>
+				</div>
+
+
+				<!--<select class="custom-select" id="inputGroupSelect01">
+							<option selected>Choose...</option>
+							<option value="1">One</option>
+							<option value="2">Two</option>
+							<option value="3">Three</option>
+						</select>-->
+			</div>
+
+
+			<div class="form-group">
+				<label for="City">City*</label>
+				<input type="text" class="form-control" id="formGroupExampleInput" placeholder="Your City" minlength="1"
+					maxlength="50" pattern="[a-zA-Z0-9]+" title="Enter only alphabets. Maximum length 50 characters"
+					required>
+			</div>
+
+			<div class="form-group">
+				<label for="Zip">Zip*</label>
+				<input type="number" class="form-control" id="formGroupExampleInput" max="999999" placeholder="Zip Code"
+					pattern="{0-9}+" title="Enter only numericals. Maximum length 6 digits" required>
+
+			</div>
+
+			<!--<div >
+						<label >Domain URL*</label>
+						<div class="input-group mb-2">
+							<div class="input-group-prepend">
+								<div class="input-group-text">https://example.com/users/</div>
+							</div>
+							<input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Should be unique">
+						</div>
+					</div>
+				-->
+		</div>
+		<!--BUSINESS INFORMATION ENDS HERE-->
+		<br />
+		<div class="col-12" id="tandc">
+			<div class="form-check">
+				<input class="form-check-input" type="checkbox" value="" id="invalidCheck"
+					onclick="registrationcheckbox()" required>
+
+				<label class="form-check-label" for="invalidCheck">
+					Agree to terms and conditions
+				</label>
+
+
+
+
+				<a id="info-icon" data-toggle="popover" title="Alert!"
+					data-content="If you are an authorised person in your business  to sign legal documents, then click here to ACCEPT the Terms and Conditions and Privacy Policy of Ulavi Technologies Pte. Ltd., Singapore and to proceed with the registration."><img
+						src="info-icon.png" width="20" height="20"></a>
+
+
+
+			</div>
+
+		</div>
+
+
+
+		<button type="submit" class="btn btn-success">Register</button>
+
+
+
+
+
+	</form>
+	<!--FORM ENDS HERE-->
+	<script src="jsFile.js"></script>
+
+
+	<!-- Optional JavaScript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+		integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+		crossorigin="anonymous"></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+		integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+		crossorigin="anonymous"></script>
+
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+		integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+		crossorigin="anonymous"></script>
+
+</body>
+
+</html>

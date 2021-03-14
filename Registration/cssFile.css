@@ -1,0 +1,60 @@
+
+.row{
+	margin: 2% 5%;
+
+}
+.navbar-brand.mb-0.h1{	 
+	width: 100%;
+	text-align: center;
+}
+body{
+	margin: 0;
+	padding: 0;
+}
+.navbar{
+	background-color: #3EA38E;
+}
+.col-6{
+	width:100%;
+	margin: auto;
+	padding: 0% 5%
+
+}
+
+h4 { 
+	padding-top: 25px; 
+	text-align: left;
+}
+
+form{
+
+	margin: 0 auto;
+}
+
+.btn.btn-success{
+	
+	margin: 0 auto;
+	background-color: #3EA38E;
+}
+.alert.alert-danger{
+	padding:-10%;
+	width:40%;
+	margin:5% auto;
+}
+#tandc{margin:5%;
+	text-align: center;
+
+}
+#info-icon{
+	cursor: pointer;
+}
+
+/*input,
+input:valid {
+    border-color: #ccc;
+}
+input:invalid {
+    border-color: red;s
+}*/
+/*the above is for styling the invalid input boxes but 
+it will not work with the 'required' attribute*/
