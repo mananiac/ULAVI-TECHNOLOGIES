@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="profile.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <title>Profile</title>
+
+</head>
+
+<body>
+    <nav class="navbar text-light">
+        <span class="navbar-brand mb-0 h1"> PROFILE NAVBAR </span>
+    </nav>
+
+
+    <div class="text-center">
+        <img src="Profile.png" height="150px" width="150px" class="rounded" alt="Profile Image">
+    </div>
+    <div class="text-center">
+        <h3>BUSINESS-NAME</h3>
+
+        
+
+    </div>
+    <form class="row g-2 needs-validation">
+        <div class="col-6 ">
+
+            <div class="form-group">
+                <label for="name">Business Name*</label>
+                <input type="text" class="form-control" name="businessName" id="formGroupExampleInput2"
+                    placeholder="Teja Auto Travels" minlength="1" maxlength="50" pattern="[a-zA-Z0-9]+"
+                    title="Enter only alphabets" required>
+            </div>
+
+            <div class="form-group">
+                <label for="contact">Business Mobile Number*</label>
+                <input type="number" class="form-control" name="contactNumber" id="formGroupExampleInput"
+                    max="9999999999" placeholder="Business Mobile Number" pattern="{0-9}+"
+                    title="Enter only numericals. Maximum length 10 digits" required>
+
+            </div>
+
+            <!-- <div class="form-group">
+                <label for="contact"> New Contact Number*</label>
+                <input type="number" class="form-control" name="contactNumber" id="formGroupExampleInput"
+                    max="9999999999" placeholder="New Contact Number" pattern="{0-9}+"
+                    title="Enter only numericals. Maximum length 10 digits" required>
+
+            </div> -->
+
+            <div class="form-group">
+                <label for="BusinessAddress">Business Address*</label>
+                <input type="text" name="businessAddress" class="form-control" id="formGroupExampleInput"
+                    placeholder="Where is your business located" minlength="1" maxlength="250" pattern="[a-zA-Z0-9]+"
+                    title="Enter only alphanumeric characters. Maximum length 250 characters" required>
+            </div>
+
+            <div class="form-group">
+                <label for="businessDescription" class="form-label">Business Description*</label>
+                <textarea class="form-control" name="businessDescription" id="businessDescription" type="text"
+                    placeholder="In not more than 500 words" minlength="1" maxlength="500" pattern="[a-zA-Z0-9]+"
+                    title="Enter only alphanumeric characters. Maximum length 500 characters" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="exampleInputEmail1"> Business Email address*</label>
+                <input type="email" class="form-control" name="email" id="exampleInputEmail1"
+                    aria-describedby="emailHelp" placeholder="example@gmail.com" required>
+                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                    else.</small>
+            </div>
+
+
+
+        </div> <!-- End of first colomn-->
+
+
+
+
+
+
+
+
+        <div class="col-6 ">
+            <br>
+            <div> <label for="formFile" class="form-label">Business Validation Documents* </label> <a id="info-icon"
+                    data-toggle="popover" title="Head Content" data-content="Body Content">
+                    <img src="info-icon.png" width="20" height="20"></a>
+                <small id="documentHelp" class="form-text text-muted">Each file size should be less than 50MB
+                    else.</small>
+                <div class="form-group input-group mb-3">
+                    <input class="form-control" type="file" id="formFile">
+                    <input class="form-control" type="file" id="formFile">
+                    <input class="form-control" type="file" id="formFile">
+                </div>
+
+            </div>
+
+            <div class="form-group">
+                <label for="Description">Bank Account Number*</label><a id="info-icon" data-toggle="popover"
+                    title="Head Content" data-content="Body Content">
+                    <img src="info-icon.png" width="20" height="20"></a>
+                <input type="number" name="bankAccountNo" class="form-control" id="formGroupExampleInput"
+                    placeholder="Bank Account Number" pattern="[0-9]{9,18}$" title="Enter only numeric characters."
+                    required>
+            </div>
+
+            <div class="form-group">
+                <label for="Description">Bank IFSC / SWIFT Code*</label>
+                <input type="text" name="bankIFSC" class="form-control" id="formGroupExampleInput"
+                    placeholder="Bank IFSC Code" pattern="[a-zA-Z0-9]+"
+                    title="As per definitions of IFSC code, it is first 4 characters as digit and remaining 7 characters as alphanumeric"
+                    required>
+            </div>
+
+            <div class="form-group">
+                <label for="bankName" class="form-label">Bank Name*</label>
+                <input type="text" class="form-control" name="bankName" id="formGroupExampleInput2"
+                    placeholder="Example: State Bank of India" minlength="1" maxlength="50" pattern="[a-zA-Z0-9]+"
+                    title="Enter only alphabets" required>
+            </div>
+
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="otpEmailFront">Check your email for OTP</span>
+                <input type="text" class="form-control" placeholder="Enter email OTP here" aria-label="Username"
+                    aria-describedby="basic-addon1">
+                <span class="input-group-text" id="otpEmail">Check </span>
+            </div>
+
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="otpContactFront">Check your contact for OTP</span>
+                <input type="text" class="form-control" placeholder="Enter contact OTP here" aria-label="Username"
+                    aria-describedby="basic-addon1">
+                <span class="input-group-text " id="otpEmail">Check </span>
+            </div>
+            <small class="form-text text-muted">All transaction notifications and communications will be sent to this
+                business email and contact number.</small>
+
+
+        </div><!-- End of second colomn-->
+
+
+
+
+
+
+        
+        <button type="submit" class="btn btn-success">Submit</button>
+    </form>
+    <!--FORM ENDS HERE-->
+
+
+
+
+    <!-- Optional JavaScript -->
+    <script src="profile.js"></script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
